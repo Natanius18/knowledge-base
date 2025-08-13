@@ -1,12 +1,12 @@
-**Chapter 1 Professionalism**
+## Chapter 1 Professionalism
 
-Be Careful What You Ask For
+**Be Careful What You Ask For**
 
-Taking Responsibility
+**Taking Responsibility****
 
-First, Do No Harm
+**First, Do No Harm**
 
-Work Ethic
+**Work Ethic**
 
 *\[My notes\]:* Стремиться к 100% покрытию тестами.
 
@@ -20,43 +20,43 @@ Work Ethic
 
 Начиная новый проект, прочитай пару книг о домене, поговори с экспертами, проинтервьюируй кастомера и юзеров.
 
-**Chapter 2 Saying No**
+## Chapter 2 Saying No
 
-Adversarial Roles
+**Adversarial Roles**
 
-High Stakes
+**High Stakes**
 
-Being a “Team Player”
+**Being a “Team Player”**
 
-The Cost of Saying Yes
+**The Cost of Saying Yes**
 
-Code Impossible
+**Code Impossible**
 
 *\[My notes\]:* никаких "я постараюсь". Уметь говорить нет. Не пытаться быть героем. Глава больше для менеджеров.
 
-**Chapter 3 Saying Yes**
+## Chapter 3 Saying Yes
 
-A Language of Commitment
+**A Language of Commitment**
 
-Learning How to Say “Yes”
+**Learning How to Say “Yes”**
 
 *\[My notes\]:* "Say. Mean. Do." Снова никаких "я постараюсь". When professionals say yes, they use the language of commitment so that there is no doubt about what they’ve promised.
 
-**Chapter 4 Coding**
+## Chapter 4 Coding
 
-Preparedness
+**Preparedness**
 
-The Flow Zone
+**The Flow Zone**
 
-Writer’s Block
+**Writer’s Block**
 
-Debugging
+**Debugging**
 
-Pacing Yourself
+**Pacing Yourself**
 
-Being Late
+**Being Late**
 
-Help
+**Help**
 
 *\[My notes\]:* When you cannot concentrate and focus sufficiently, the code you write will be wrong.
 
@@ -90,13 +90,13 @@ Define “DONE”.
 
 Очень похоже что чувак никогда не работал, потому что according to this я бы ни строчки кода в жизни не написал. А реально — когда работать? Только в паре, получается, потому что парное программирование не заведет в поток по его словам и поможет восстановить контекст если тебя отвлекли. Так что, теперь нанимать разработчиков только парами? А может перестать задалбывать их митингами?
 
-**Chapter 5 Test Driven Development**
+## Chapter 5 Test Driven Development
 
-The Jury Is In
+**The Jury Is In**
 
-The Three Laws of TDD
+**The Three Laws of TDD**
 
-What TDD Is Not
+**What TDD Is Not**
 
 1. You are not allowed to write any production code until you have first written a failing unit test.
 
@@ -108,21 +108,21 @@ What TDD Is Not
 
 Это поможет правильному дизайну.
 
-**Chapter 6 Practicing**
+## Chapter 6 Practicing
 
-Some Background on Practicing
+**Some Background on Practicing**
 
-The Coding Dojo
+**The Coding Dojo**
 
-Broadening Your Experience
+**Broadening Your Experience**
 
 *\[My notes\]:* Нужно практиковаться, чтобы выработать автоматические решения задач, чтобы потом реагировать быстро и эффективно. Но для практики советует выбирать новый язык программирования, а не тот, на котором работаешь, чтобы развивать свои навыки полиглота. Роналду наверное потому и хорош, что гонял с пацанами в баскет, бейсбол и теннис между своими матчами.
 
-**Chapter 7 Acceptance Testing**
+## Chapter 7 Acceptance Testing
 
-Communicating Requirements
+**Communicating Requirements**
 
-Acceptance Tests
+**Acceptance Tests**
 
 *\[My notes\]:* Стейкхолдеры сами не знают чего хотят, поэтому чем точнее требования — тем больше вероятность, что они захотят другое в конце. И девелоперы не должны давать четких эстимейтов, на то они и эстимейты. Чем позже — тем точнее.
 
@@ -132,7 +132,7 @@ Acceptance Tests
 
 Как по мне, пока мне платят почасово, а не за выкаченную в продакшн фичу, то это только в интересах стейкхолдера получить эту фичу именно так как они хотели как можно быстрее. Конечно, если у меня есть сомнения в понимании каких-то требований, то я уточню, но если я уверен что мне все понятно и при этом сделал не то что они имели в виду, то это только их проблема. Я то смогу переделать сколько угодно раз. Мне за время платят.
 
-Definition of done.
+**Definition of done.**
 
 Done means done.
 
@@ -158,27 +158,27 @@ It is very important to keep the CI tests running at all times. They should neve
 
 Ну это перебор. Кто накосячил тот починет. Чего все должны бросать свою работу? Каждый в своей ветке и все норм. Про постоянные билды после каждого коммита это хорошая практика, да. Хотя вроде как это у многих по умолчанию: либо дженкинс, либо гитлаб пайплайны, но вроде как и не самый очевидный совет, так что ладно, зачтем.
 
-**Chapter 8 Testing Strategies**
+## Chapter 8 Testing Strategies
 
-QA Should Find Nothing
+**QA Should Find Nothing**
 
-The Test Automation Pyramid
+**The Test Automation Pyramid**
 
 *\[My notes\]:* Component tests are written by QA and Business with assistance from development. They are composed in a component-testing environment such as FitNesse, JBehave, or Cucumber. (GUI components are tested with GUI testing environments such as Selenium or Watir.) The intent is that the business should be able to read and interpret these tests, if not author them. Ну снова то же самое. В нашем случае бизнес понятия не имеет как фичи должны работать, о каком понимании тестов вообще может быть речь?
 
-**Chapter 9 Time Management**
+## Chapter 9 Time Management
 
-Meetings
+**Meetings**
 
-Focus-Manna
+**Focus-Manna**
 
-Time Boxing and Tomatoes
+**Time Boxing and Tomatoes**
 
-Avoidance
+**Avoidance**
 
-Blind Alleys
+**Blind Alleys**
 
-Marshes, Bogs, Swamps, and Other Messes
+**Marshes, Bogs, Swamps, and Other Messes**
 
 *\[My notes\]:* Meetings cost about \$200 per hour per attendee. This takes into account salaries, benefits, facilities costs, and so forth. Чувак хочет сказать, что у него в команде все зарабатывают \$33600 в месяц?
 
@@ -202,23 +202,23 @@ Nothing has a more profound or long-lasting negative effect on the productivity 
 
 Moving forward through a swamp, when you know it’s a swamp, is the worst kind of priority inversion. By moving forward you are lying to yourself, lying to your team, lying to your company, and lying to your customers. You are telling them that all will be well, when in fact you are heading to a shared doom. Опять же, на моей практике команда всегда говорит об этом. Менеджеры решают, что это неважно и форсят пилить фичи вместо рефакторинга.
 
-**Chapter 10 Estimation**
+## Chapter 10 Estimation
 
-What Is an Estimate?
+**What Is an Estimate?**
 
-PERT
+**PERT**
 
-Estimating Tasks
+**Estimating Tasks**
 
-The Law of Large Numbers
+**The Law of Large Numbers**
 
 *\[My notes\]:* В принципе то же самое, что уже было сказано во второй главе, эстимейт это не коммитмент + подробнее про техники эстимирования, типа скрам покер. Прикольная система этот PERT, жаль только что никто не пользуется.
 
-**Chapter 11 Pressure**
+## Chapter 11 Pressure
 
-Avoiding Pressure
+**Avoiding Pressure**
 
-Handling Pressure
+**Handling Pressure**
 
 *\[My notes\]:* Чувак с опытом 20 лет повелся на какой-то дурацкий стартап, где только спустя 4 года (!) очень стрессовой безрезультативной работы (по ночам и по выходным в том числе), после того как ему жена сказала, что он идиот, только о работе и думает, а дети растут без отца, — понял, что он действительно идиот; уволился, стал консультантом и теперь капец как гордится тем, что больше не называет никого "босс". Ну реально идиот.
 
@@ -228,11 +228,11 @@ Choose disciplines that you feel comfortable following in a crisis. Then follow 
 
 So I want you sitting around tables facing each other. I want you to be able to smell each other’s fear. Тут в нем прям какой-то сильный писатель проснулся.
 
-**Chapter 12 Collaboration**
+## Chapter 12 Collaboration
 
-Programmers versus People
+**Programmers versus People**
 
-Cerebellums
+**Cerebellums**
 
 *\[My notes\]:* Сначала повыпендривался, что они с другом в гараже сделали что-то мега крутое. При этом у них была одна проблемка и они решили ее пофиксить. Tim and I were not experts on data structures and algorithms. We’d never heard of hash tables or binary searches. We had no clue how to make an algorithm fast. We just knew that what we were doing was too slow. Хоть бы постеснялся такое говорить.
 
@@ -248,9 +248,9 @@ I want the team to own the code, not the individuals. Типа чтоб никт
 
 Perhaps we didn’t get into programming to work with people. Tough luck for us. Programming is all about working with people. We need to work with our business, and we need to work with each other. Ну тут, к сожалению, правда.
 
-**Chapter 13 Teams and Projects**
+## Chapter 13 Teams and Projects
 
-Does It Blend?
+**Does It Blend?**
 
 *\[My notes\]:*  Now here’s a rule: There is no such thing as half a person. It makes no sense to tell a programer to devote half their time to project A and the rest of their time to project B, especially when the two projects have two different project managers, different business analysts, different programmers, and different testers. Полностью согласен, но разве это не очевидно? Очевидно. Но только не для менеджеров почему-то.
 
@@ -270,15 +270,15 @@ Reallocating priorities that quickly is virtually impossible with the teams that
 
 Teams are harder to build than projects. Therefore, it is better to form persistent teams that move together from one project to the next and can take on more than one project at a time. The goal in forming a team is to give that team enough time to gel, and then keep it together as an engine for getting many projects done. Ну с выводами в принципе согласен. Очередная фантастическая глава для менеджеров.
 
-**Chapter 14 Mentoring, Apprenticeship, and Craftsmanship**
+## Chapter 14 Mentoring, Apprenticeship, and Craftsmanship
 
-Degrees of Failure
+**Degrees of Failure**
 
-Mentoring
+**Mentoring**
 
-Apprenticeship
+**Apprenticeship**
 
-Craftsmanship
+**Craftsmanship**
 
 Чувак был разочарован девочкой, которая сказала, что не учила программирование на CS в универе и не проходила никакие курсы. What you learn in school and what you find on the job are often very different things. Тоже мне открытие. Желаю ему удачи менять систему образования.
 
@@ -298,25 +298,25 @@ Craftsmanship is a meme that contains values, disciplines, techniques, attitudes
 
 It is time for those of us in the software industry to face the fact that guiding the next batch of software developers to maturity will fall to us, not to the universities. А, он не собирается менять систему образования — решил, что сам научит как надо. Ладно.
 
-**Appendix A Tooling**
+## Appendix A Tooling
 
-Tools
+**Tools**
 
-Source Code Control
+**Source Code Control**
 
-IDE/Editor
+**IDE/Editor**
 
-Issue Tracking
+**Issue Tracking**
 
-Continuous Build
+**Continuous Build**
 
-Unit Testing Tools
+**Unit Testing Tools**
 
-Component Testing Tools
+**Component Testing Tools**
 
-Integration Testing Tools
+**Integration Testing Tools**
 
-UML/MDA
+**UML/MDA**
 
 *\[My notes\]:* напоследок накидал список всем известных тулов, которыми он пользуется.
 
