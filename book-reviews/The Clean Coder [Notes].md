@@ -262,17 +262,13 @@ A gelled team can accept many projects simultaneously and will divvy up the work
 
 Management can set targets for each project given to a team. For example, if the average velocity of a team is 50 and they have three projects they are working on, then management can ask the team to split their effort into 15, 15, and 20.
 
-Aside from having a gelled team working on your projects, the advantage of this scheme is that in an emergency the business can say, “Project B is in crisis; put
-
-100% of your effort on that project for the next three weeks.”
+Aside from having a gelled team working on your projects, the advantage of this scheme is that in an emergency the business can say, “Project B is in crisis; put 100% of your effort on that project for the next three weeks.”
 
 Reallocating priorities that quickly is virtually impossible with the teams that came out of the blender, but gelled teams that are working on two or three projects concurrently can turn on a dime.
 
 Опять то же самое. Так можно делить людей или нет?
 
-Teams are harder to build than projects. Therefore, it is better to form persistent teams that move together from one project to the next and can take on more
-
-than one project at a time. The goal in forming a team is to give that team enough time to gel, and then keep it together as an engine for getting many projects done. Ну с выводами в принципе согласен. Очередная фантастическая глава для менеджеров.
+Teams are harder to build than projects. Therefore, it is better to form persistent teams that move together from one project to the next and can take on more than one project at a time. The goal in forming a team is to give that team enough time to gel, and then keep it together as an engine for getting many projects done. Ну с выводами в принципе согласен. Очередная фантастическая глава для менеджеров.
 
 **Chapter 14 Mentoring, Apprenticeship, and Craftsmanship**
 
@@ -296,9 +292,7 @@ Apprenticeship ought to last a year.
 
 Again, all of this is idealized and hypothetical. Спасибо, что уточнил.
 
-The difference is the very notion that professional values and technical acumen must be taught, nurtured, nourished, coddled, and encultured. What’s missing
-
-from our current sterile approach is the responsibility of the elders to teach the young. Боже сколько лишних слов.
+The difference is the very notion that professional values and technical acumen must be taught, nurtured, nourished, coddled, and encultured. What’s missing from our current sterile approach is the responsibility of the elders to teach the young. Боже сколько лишних слов.
 
 Craftsmanship is a meme that contains values, disciplines, techniques, attitudes, and answers. Вот только мемов нам тут не хватало.
 
