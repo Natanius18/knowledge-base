@@ -2,7 +2,7 @@
 
 **Be Careful What You Ask For**
 
-**Taking Responsibility****
+**Taking Responsibility**
 
 **First, Do No Harm**
 
