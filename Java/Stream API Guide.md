@@ -16,6 +16,7 @@ The **Stream API**, introduced in **Java 8**, is one of the most powerful additi
 8. [Optional and Streams](#8-optional-and-streams)
 9. [Common Pitfalls](#9-common-pitfalls)
 10. [Best Practices](#10-best-practices)
+11. [Advanced Grouping & Partitioning Cases](#11-advanced-grouping--partitioning-cases)
 
 ---
 
@@ -511,3 +512,158 @@ s.forEach(System.out::println); // IllegalStateException
     * The environment has enough cores.
 * Keep pipelines **readable**: one operation per line.
 * Remember: **Streams are not always faster** — they’re about clarity and maintainability.
+
+---
+
+## 11. Advanced Grouping & Partitioning Cases
+
+### 1. Partitioning + Grouping
+
+Combine a boolean partition with secondary grouping:
+
+```java
+record Person(String name, int age) {}
+List<Person> people = List.of(
+    new Person("Alice", 23),
+    new Person("Bob", 30),
+    new Person("Charlie", 25),
+    new Person("Dave", 19)
+);
+
+// Partition adults (age >= 25) and group by age bracket
+Map<Boolean, Map<String, List<Person>>> result = people.stream()
+    .collect(Collectors.partitioningBy(
+        p -> p.age >= 25,
+        Collectors.groupingBy(p -> {
+            if (p.age < 20) return "Teen";
+            else if (p.age < 30) return "Young Adult";
+            else return "Adult";
+        })
+    ));
+
+System.out.println(result);
+/* Output:
+{
+  false={Teen=[Dave], Young Adult=[Alice]},
+  true={Young Adult=[Charlie], Adult=[Bob]}
+}
+*/
+```
+
+---
+
+### 2. Top-N elements per group
+
+Find top 1 oldest person per city:
+
+```java
+record Person(String name, String city, int age) {}
+List<Person> people = List.of(
+    new Person("Alice", "NY", 23),
+    new Person("Bob", "NY", 30),
+    new Person("Charlie", "LA", 25),
+    new Person("Dave", "LA", 40)
+);
+
+Map<String, Optional<Person>> topOldest = people.stream()
+    .collect(Collectors.groupingBy(
+        Person::city,
+        Collectors.maxBy(Comparator.comparingInt(Person::age))
+    ));
+
+System.out.println(topOldest);
+// Output: {NY=Optional[Bob], LA=Optional[Dave]}
+```
+
+---
+
+### 3. Counting elements per partition
+
+Count even vs odd numbers:
+
+```java
+List<Integer> nums = List.of(1,2,3,4,5,6,7,8,9);
+
+Map<Boolean, Long> countPartition = nums.stream()
+    .collect(Collectors.partitioningBy(
+        n -> n % 2 == 0,
+        Collectors.counting()
+    ));
+
+System.out.println(countPartition);
+// Output: {false=5, true=4}
+```
+
+---
+
+### 4. Mapping + Grouping
+
+Get **names only** per age group:
+
+```java
+List<Person> people = List.of(
+    new Person("Alice", 23),
+    new Person("Bob", 30),
+    new Person("Charlie", 23)
+);
+
+Map<Integer, List<String>> namesByAge = people.stream()
+    .collect(Collectors.groupingBy(
+        Person::age,
+        Collectors.mapping(Person::name, Collectors.toList())
+    ));
+
+System.out.println(namesByAge);
+// Output: {23=[Alice, Charlie], 30=[Bob]}
+```
+
+---
+
+### 5. Partitioning + Summing
+
+Sum amounts in a list of transactions by **positive vs negative**:
+
+```java
+record Transaction(double amount) {}
+List<Transaction> txs = List.of(
+    new Transaction(100),
+    new Transaction(-50),
+    new Transaction(200),
+    new Transaction(-20)
+);
+
+Map<Boolean, Double> sumBySign = txs.stream()
+    .collect(Collectors.partitioningBy(
+        t -> t.amount > 0,
+        Collectors.summingDouble(t -> t.amount)
+    ));
+
+System.out.println(sumBySign);
+// Output: {false=-70.0, true=300.0}
+```
+
+---
+
+### 6. Multi-level Partitioning
+
+Partition numbers by even/odd and then by >5 / ≤5:
+
+```java
+List<Integer> numbers = List.of(1,2,3,6,7,8);
+
+Map<Boolean, Map<Boolean, List<Integer>>> multiPartition = numbers.stream()
+    .collect(Collectors.partitioningBy(
+        n -> n % 2 == 0,                 // even?
+        Collectors.partitioningBy(n -> n > 5) // greater than 5?
+    ));
+
+System.out.println(multiPartition);
+/* Output:
+{
+  false={false=[1, 3], true=[7]},
+  true={false=[2], true=[6, 8]}
+}
+*/
+```
+
+
