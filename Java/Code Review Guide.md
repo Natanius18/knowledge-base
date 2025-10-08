@@ -3,7 +3,7 @@
 A comprehensive guide to reviewing Java code effectively.
 Based on the [Awesome Code Reviews Checklist](https://www.awesomecodereviews.com/checklists/code-review-checklist/) — adapted and expanded for modern Java projects (Spring Boot, Maven, JPA, REST APIs, and microservices).
 
----
+
 
 ## 📋 Contents
 
@@ -36,7 +36,7 @@ As a **code author**, be your own reviewer first:
 - [ ] Code follows the project’s **coding conventions and style guide**.
 - [ ] Self-review completed — you’ve run through this checklist once before sending it.
 
----
+
 
 <a name="implementation"></a>
 ## ⚙️ Implementation
@@ -50,7 +50,7 @@ As a **code author**, be your own reviewer first:
 - [ ] Is the code at the **right abstraction level** (no low-level logic in controllers)?
 - [ ] Are **configuration values** externalized (e.g., `application.yml`) instead of hardcoded?
 
----
+
 
 <a name="logic-errors-and-bugs"></a>
 ## 🐛 Logic Errors and Bugs
@@ -61,7 +61,7 @@ As a **code author**, be your own reviewer first:
 - [ ] Are **concurrency issues** possible (race conditions, shared state)?
 - [ ] Are **default values** used safely (not hiding errors)?
 
----
+
 
 <a name="error-handling-and-logging"></a>
 ## 🚨 Error Handling and Logging
@@ -73,7 +73,7 @@ As a **code author**, be your own reviewer first:
 - [ ] Are **sensitive details** (tokens, passwords) never logged?
 - [ ] Are **error messages** helpful for debugging and not leaking secrets?
 
----
+
 
 <a name="usability-and-accessibility"></a>
 ## 🎨 Usability and Accessibility
@@ -86,7 +86,7 @@ As a **code author**, be your own reviewer first:
 - [ ] Is the **API/UI predictable** and easy to use?
 - [ ] Is the **UI accessible** when applicable (labels, ARIA, contrasts)?
 
----
+
 
 <a name="ethics-and-morality"></a>
 ## ⚖️ Ethics and Morality
@@ -95,7 +95,7 @@ As a **code author**, be your own reviewer first:
 - [ ] Could the feature **cause harm, manipulation, or discrimination**?
 - [ ] If applicable (ML/algorithms), check for potential **bias** and unfair outcomes.
 
----
+
 
 <a name="testing-and-testability"></a>
 ## 🧪 Testing and Testability
@@ -107,7 +107,7 @@ As a **code author**, be your own reviewer first:
 - [ ] Are tests **readable, fast, and reliable**?
 - [ ] Are **CI pipelines** green after this change?
 
----
+
 
 <a name="dependencies"></a>
 ## 📦 Dependencies
@@ -116,7 +116,7 @@ As a **code author**, be your own reviewer first:
 - [ ] Are they declared with the **correct scope** in `pom.xml` (test vs. compile)?
 - [ ] Were any README/configs updated if required?
 
----
+
 
 <a name="security-and-data-privacy"></a>
 ## 🔐 Security and Data Privacy
@@ -126,7 +126,7 @@ As a **code author**, be your own reviewer first:
 - [ ] Are **secrets** (passwords, keys) not stored in source control and not hardcoded?
 - [ ] Are **sensitive logs** redacted and HTTPS/CORS settings correct?
 
----
+
 
 <a name="performance"></a>
 ## ⚡ Performance
@@ -137,7 +137,7 @@ As a **code author**, be your own reviewer first:
 - [ ] Is **lazy vs eager fetching** in JPA chosen appropriately?
 - [ ] Is **caching/pagination** used where appropriate?
 
----
+
 
 <a name="readability"></a>
 ## ✍️ Readability
@@ -149,7 +149,7 @@ As a **code author**, be your own reviewer first:
 - [ ] Are comments used to explain *why*, not *what*?
 - [ ] Remove **commented-out or obsolete code**.
 
----
+
 
 <a name="style-consistency-maintainability"></a>
 ## 🧱 Style, Consistency & Maintainability
@@ -160,7 +160,7 @@ As a **code author**, be your own reviewer first:
 - [ ] Is **dependency injection** done by constructor where possible?
 - [ ] Can other developers **reasonably extend or maintain** this code later?
 
----
+
 
 <a name="expert-review"></a>
 ## 🧠 Expert Review
@@ -168,7 +168,7 @@ As a **code author**, be your own reviewer first:
 - [ ] Does this change require a **security, DB, or architecture expert** review?
 - [ ] Will it impact **other teams or services** that should be notified?
 
----
+
 
 <a name="mindset-for-reviewers"></a>
 ## 💬 Mindset for Reviewers
@@ -179,4 +179,4 @@ As a **code author**, be your own reviewer first:
 - ✅ **Praise good code** to encourage positive patterns.
 - ✅ Keep discussions on the PR so others can learn.
 
----
+
