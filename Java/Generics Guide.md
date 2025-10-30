@@ -65,7 +65,7 @@ This mismatch makes arrays and generics tricky.
 ❌ Illegal:
 
 ```java
-T arr[] = new T[10];                // Error: generic array creation
+T[] arr = new T[10];                // Error: generic array creation
 Gen<Integer>[] arr = new Gen<Integer>[10]; // Error
 new Gen<?>[10];                     // Error
 ```
