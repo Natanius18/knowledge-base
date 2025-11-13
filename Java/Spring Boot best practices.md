@@ -18,8 +18,7 @@
 13. [Monitoring and Observability](#13-monitoring-and-observability)
 14. [Docker and Deployment](#14-docker-and-deployment)
 15. [Common Pitfalls](#15-common-pitfalls)
-16. [Production Readiness Checklist](#16-production-readiness-checklist)
-17. [Interview Q&A](#17-interview-qa)
+16. [Interview Q&A](#17-interview-qa)
 
 ***
 
@@ -862,9 +861,7 @@ log.info("User login: {}",user); // May contain password!
 ✅ **Good:**
 
 ```java
-log.info("User login: userId={}, email={}",user.getId(),user.
-
-getEmail());
+log.info("User login: userId={}, email={}",user.getId(), user.getEmail());
 ```
 
 ***
@@ -941,15 +938,9 @@ logging:
 ```java
 log.info("Order processed: orderId={}, userId={}, amount={}, status={}",
          order.getId(), 
-    order.
-
-getUserId(), 
-    order.
-
-getAmount(), 
-    order.
-
-getStatus());
+         order.getUserId(), 
+         order.getAmount(), 
+         order.getStatus());
 ```
 
 ***
@@ -1203,21 +1194,6 @@ public class DatabaseHealthIndicator implements HealthIndicator {
 }
 ```
 
-***
-
-### Use distributed tracing
-
-```xml
-
-<dependency>
-    <groupId>io.micrometer</groupId>
-    <artifactId>micrometer-tracing-bridge-brave</artifactId>
-</dependency>
-<dependency>
-<groupId>io.zipkin.reporter2</groupId>
-<artifactId>zipkin-reporter-brave</artifactId>
-</dependency>
-```
 
 ***
 
@@ -1292,41 +1268,6 @@ spring:
 
 ***
 
-### Use readiness and liveness probes
-
-```yaml
-management:
-  endpoint:
-    health:
-      probes:
-        enabled: true
-  health:
-    livenessState:
-      enabled: true
-    readinessState:
-      enabled: true
-```
-
-**Kubernetes:**
-
-```yaml
-livenessProbe:
-  httpGet:
-    path: /actuator/health/liveness
-    port: 8080
-  initialDelaySeconds: 30
-  periodSeconds: 10
-
-readinessProbe:
-  httpGet:
-    path: /actuator/health/readiness
-    port: 8080
-  initialDelaySeconds: 10
-  periodSeconds: 5
-```
-
-***
-
 ## 15. Common Pitfalls
 
 ### Blocking in async methods
@@ -1374,11 +1315,7 @@ try(InputStream is = new FileInputStream("file.txt")){
 
 ***
 
-### Returning entities from controllers
 
-See [REST API Design](#5-rest-api-design) — always use DTOs.
-
-***
 
 ### Ignoring transaction boundaries
 
@@ -1412,76 +1349,7 @@ See [Bean Management](#4-bean-management-and-dependency-injection) — prefer co
 
 ***
 
-## 16. Production Readiness Checklist
-
-### Configuration
-
-- [ ] All secrets externalized (no hardcoded passwords)
-- [ ] Profiles configured (dev, staging, prod)
-- [ ] Database connection pooling enabled
-- [ ] Logging levels appropriate for environment
-- [ ] CORS configured correctly
-
-### Security
-
-- [ ] Spring Security configured
-- [ ] HTTPS enabled in production
-- [ ] Authentication and authorization working
-- [ ] CSRF protection enabled (or disabled for stateless APIs)
-- [ ] Sensitive data never logged
-- [ ] SQL injection prevention (use parameterized queries)
-- [ ] Input validation on all endpoints
-
-### Database
-
-- [ ] Database migrations automated (Flyway/Liquibase)
-- [ ] Indexes on foreign keys and search columns
-- [ ] Connection pooling optimized
-- [ ] N+1 queries eliminated
-- [ ] Transactions properly configured
-
-### Performance
-
-- [ ] Caching enabled where appropriate
-- [ ] Pagination implemented for large datasets
-- [ ] Async processing for long-running tasks
-- [ ] GZIP compression enabled
-- [ ] JVM tuned for production workload
-
-### Testing
-
-- [ ] Unit tests: 80%+ coverage
-- [ ] Integration tests for critical paths
-- [ ] CI/CD pipeline configured
-- [ ] All tests passing
-
-### Monitoring
-
-- [ ] Actuator endpoints exposed
-- [ ] Health checks configured
-- [ ] Metrics exported (Prometheus/Micrometer)
-- [ ] Logging centralized (ELK, Splunk, CloudWatch)
-- [ ] Distributed tracing (Zipkin/Jaeger) if microservices
-
-### Deployment
-
-- [ ] Dockerfile optimized (multi-stage build)
-- [ ] Docker image scanned for vulnerabilities
-- [ ] Kubernetes readiness/liveness probes configured
-- [ ] Graceful shutdown enabled
-- [ ] Environment variables documented
-- [ ] Rollback plan documented
-
-### Documentation
-
-- [ ] API documentation (OpenAPI/Swagger)
-- [ ] README with setup instructions
-- [ ] Architecture diagram
-- [ ] Deployment guide
-
-***
-
-## 17. Interview Q&A
+## 16. Interview Q&A
 
 | Question                                                                    | Short Answer                                                                                              |
 |-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
